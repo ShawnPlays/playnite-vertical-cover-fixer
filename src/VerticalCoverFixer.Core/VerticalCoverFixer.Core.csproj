@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Plain logic with no Playnite dependency, so it can be unit-tested on modern .NET.
+    The add-on compiles these same source files into its own DLL (see VerticalCoverFixer.csproj),
+    so the .pext ships a single assembly.
+  -->
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+</Project>

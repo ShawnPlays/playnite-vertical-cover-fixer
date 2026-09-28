@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/VerticalCoverFixer.Core/VerticalCoverFixer.Core.csproj" />
+    <Project Path="src/VerticalCoverFixer/VerticalCoverFixer.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/VerticalCoverFixer.Tests/VerticalCoverFixer.Tests.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,13 @@
+<Project>
+
+  <!--
+    Shared by every project in the repository. The copyright is stamped into each .dll,
+    where Windows shows it under Properties → Details. Keep it in step with the LICENSE file.
+  -->
+  <PropertyGroup>
+    <Authors>ShawnPlays</Authors>
+    <Copyright>Copyright (c) 2026 ShawnPlays. Released under the MIT License.</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+</Project>

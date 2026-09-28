@@ -1,0 +1,35 @@
+<UserControl x:Class="VerticalCoverFixer.VerticalCoverFixerSettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StackPanel Margin="20">
+        <TextBlock Text="SteamGridDB API key" FontWeight="Bold" />
+        <TextBlock TextWrapping="Wrap" Margin="0,6,0,6">
+            Needed for games outside Steam, and for Steam games that have no official vertical art. It's free:
+            sign in at <Hyperlink NavigateUri="https://www.steamgriddb.com/profile/preferences/api"
+                                  RequestNavigate="OnRequestNavigate">steamgriddb.com</Hyperlink>,
+            then copy the key from Preferences → API.
+        </TextBlock>
+        <TextBox Text="{Binding Settings.SteamGridDbApiKey, UpdateSourceTrigger=PropertyChanged}" />
+
+        <TextBlock Text="Where to get covers" FontWeight="Bold" Margin="0,20,0,6" />
+        <CheckBox IsChecked="{Binding Settings.UseSteamArt}" Margin="0,4"
+                  Content="For Steam games, try Steam's official vertical art first (no key needed)" />
+        <CheckBox IsChecked="{Binding Settings.AcceptClosestMatch}" Margin="0,4"
+                  Content="If no SteamGridDB game has exactly the same name, use its closest match" />
+        <CheckBox IsChecked="{Binding Settings.AllowNsfw}" Margin="0,4"
+                  Content="Allow covers SteamGridDB marks as adult (NSFW)" />
+        <CheckBox IsChecked="{Binding Settings.AllowHumor}" Margin="0,4"
+                  Content="Allow covers SteamGridDB marks as joke/humor" />
+
+        <TextBlock Text="Which covers to replace" FontWeight="Bold" Margin="0,20,0,6" />
+        <CheckBox IsChecked="{Binding Settings.FillMissing}" Margin="0,4" Content="Missing covers" />
+        <CheckBox IsChecked="{Binding Settings.ReplaceHorizontal}" Margin="0,4" Content="Horizontal (wide) covers" />
+        <CheckBox IsChecked="{Binding Settings.ReplaceSquare}" Margin="0,4" Content="Square covers" />
+        <CheckBox IsChecked="{Binding Settings.IncludeHidden}" Margin="0,4" Content="Include hidden games" />
+
+        <TextBlock TextWrapping="Wrap" Margin="0,20,0,0" Opacity="0.7">
+            Your current covers are backed up before they're replaced. Use Extensions → Vertical Cover Fixer →
+            Open reports and backups folder to find them.
+        </TextBlock>
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,9 @@
+# Playnite identifies the add-on by this Id. Once people have installed it, don't change it,
+# or Playnite will treat an update as a separate add-on.
+Id: VerticalCoverFixer_918bc684-6300-488c-8ad3-c42f62f9036c
+Name: Vertical Cover Fixer
+Author: ShawnPlays
+Version: 1.0.0
+Module: VerticalCoverFixer.dll
+Type: GenericPlugin
+Icon: icon.png
